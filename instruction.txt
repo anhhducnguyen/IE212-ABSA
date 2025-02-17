@@ -1,0 +1,13 @@
+- B1: Đứng ở kafka
+
+bin\windows\zookeeper-server-start.bat config/zookeeper.properties
+
+bin\windows\kafka-server-start.bat config/server.properties
+
+bin\windows\kafka-topics.bat --create --topic ryhjlimi-shopee-2 --bootstrap-server localhost:9092
+
+- B2: Chạy python producer.py
+
+- B3: Đứng ở kafka
+
+bin\windows\kafka-console-consumer.bat --topic ryhjlimi-shopee-2 --from-beginning --bootstrap-server localhost:9092
